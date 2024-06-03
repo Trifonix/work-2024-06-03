@@ -1,0 +1,65 @@
+/* style.css */
+
+/* Центрирование приложения на экране */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота экрана */
+  background-color: #f0f0f0; /* Цвет фона */
+  font-family: 'Arial', sans-serif; /* Установка красивого шрифта */
+}
+
+/* Расположение элементов в столбец */
+.container {
+  display: flex;
+  flex-direction: column; /* Расположение в столбец */
+  align-items: center; /* Выравнивание элементов по центру */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стили для кнопки */
+#clickButton {
+  background-color: #f39090; /* Красный цвет для кнопки */
+  color: #4f2323; /* Белый цвет текста */
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для фона счетчика */
+#score {
+  background-color: #4682b4; /* Синий цвет для фона счетчика */
+  color: #fff; /* Белый цвет текста */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Анимация изменения цвета фона */
+@keyframes changeColor {
+  0% { background-color: #4682b4; }
+  50% { background-color: #87ceeb; }
+  100% { background-color: #4682b4; }
+}
+
+/* Анимация увеличения счета */
+@keyframes clickScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* увеличиваем размер на 10% */
+    color: green; /* меняем цвет на зеленый на 50% анимации */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* добавляем свечение */
+  }
+  100% {
+    transform: scale(1);
+    color: inherit; /* возвращаем исходный цвет */
+    text-shadow: none; /* убираем свечение */
+  }
+}
